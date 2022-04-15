@@ -1,0 +1,9 @@
+package org.com.main;
+
+public class Student {
+	//data members
+	public String name;
+	public String id;
+	public String email;
+	
+}

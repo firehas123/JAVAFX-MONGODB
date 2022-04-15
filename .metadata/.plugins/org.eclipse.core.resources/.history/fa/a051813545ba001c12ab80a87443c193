@@ -1,0 +1,19 @@
+package org.com.main;
+
+public class DB {
+	//this class is used to fetch data from mongoDB
+	DB(){
+		
+	}
+
+	public Student getProfile() {
+		Student std;
+		return null;
+	}
+
+	public String getCalendar() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

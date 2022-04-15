@@ -1,0 +1,7 @@
+package org.com.main;
+
+public class Teacher {
+	public String courseNo;
+	public String courseName;
+	public String profname;
+}

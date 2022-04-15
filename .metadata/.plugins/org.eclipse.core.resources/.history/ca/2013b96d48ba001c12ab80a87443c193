@@ -1,0 +1,44 @@
+package org.com.main;
+
+import java.sql.*;
+import java.util.*;
+
+public class DB {
+	//data members\
+	Connection con;
+	Statement st;
+	//this class is used to fetch data from mongoDB
+	DB(){
+		try {
+		Class.forName("com.mysql.jdbc.Driver");
+	    String url = "jdbc:mysql://127.0.0.1/student-teacher";
+	    con=DriverManager.getConnection(url,"root","root");
+	    st=con.createStatement();
+		}catch(Exception e) {
+			
+		}
+	}
+
+	public Student getProfile() throws Exception {
+		
+		String query="Select * from student;";
+		String n,e,p,s;
+		Student std;
+		
+			ResultSet rs = st.executeQuery( query );
+			n = rs.getString("name");
+			e = rs.getString("email");
+			p = rs.getString("phoneN");
+			s = rs.getString("id");
+			std = new Student(n,e,p,s);
+			
+		
+		return std;
+	}
+
+	public String getCalendar() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}
